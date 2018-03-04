@@ -30,13 +30,13 @@ from sys import exit
 #   * ONEZONE_ADMIN_AUTH
 
 
-ONEZONE_IP='192.168.1.99'
-LUMA_IP='192.168.1.200'
+ONEZONE_IP=''
+LUMA_IP=''
 
 ONEZONE_PANEL='https://{}:9443/api/v3/onepanel'.format(ONEZONE_IP)
 ONEZONE_PANEL_AUTH=HTTPBasicAuth('admin', 'password')
 
-ONEZONE='https://{}:8443/api/v3/onezone'.format(ONEZONE_IP)
+ONEZONE='https://{}/api/v3/onezone'.format(ONEZONE_IP)
 ONEZONE_ADMIN_AUTH=HTTPBasicAuth('admin', 'password')
 
 LUMA='http://{}:8080/api/v3/luma'.format(LUMA_IP)
@@ -48,7 +48,7 @@ PASSWORD='RANDOM'
 # Space Id to which the users should be added, assuming all users
 # should share the same data space. The Space Id can be copied from the
 # Oneprovider panel interfaces under tab Spaces.
-SPACE_ID='Beiqfxp6wquV7rpgNSb4HFNJDnlbLxdjFsfwTX6rrxc'
+SPACE_ID='5d6d026b60b96d6025f209ae2072dd23'
 
 # A default GID for a data space can be defined, without mapping GID to
 # specific groups in Onedata.
@@ -61,7 +61,7 @@ STORAGE_NAME='DESY'
 STORAGE_TYPE='posix'
 LOW_UID_RANGE=1001
 HIGH_UID_RANGE=1004
-USER_LOGIN_PREFIX='XX'
+USER_LOGIN_PREFIX='desy-'
 
 
 def checkResponse(res):
